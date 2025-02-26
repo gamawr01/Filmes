@@ -32,6 +32,7 @@ async function performSearch() {
         if (movieData.Response === 'True') {
             showMovieDetails(movieData);
             searchInput.classList.add('success');
+			document.getElementById('result').style.display = 'block';
         } else {
             showError('Filme não encontrado. Tente outro nome.');
         }
