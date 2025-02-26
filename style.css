@@ -21,6 +21,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(100deg, #007BFF, #1e3c72);
+    background: url('poster.png');
+    background-size: 200px;
 }
 
 /* Container Principal */
@@ -89,16 +92,18 @@ button:hover {
     gap: 5px;
     grid-template-columns: minmax(150px, 300px) 1fr; /* Ajuste a largura do poster */
     align-items: start; /* Alinha os itens no topo */
+    display: none;
 }
 
 #result img {
-    width: 100;
+    width: 280px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     object-fit: cover; /* Mantém a proporção da imagem */
     aspect-ratio: 2/3; /* Mantém a proporção do poster */
 	align-items: center;
+   
 }
 
 
@@ -107,6 +112,7 @@ button:hover {
     flex-direction: column; /* Organiza o texto em coluna */
     gap: 5px; /* Espaçamento entre os elementos */
     text-align: center; /* Alinha o texto à esquerda */
+   
 }
 
 
