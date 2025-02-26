@@ -22,6 +22,7 @@ async function performSearch() {
 
     if (!searchTerm) {
         showError('Por favor, digite o nome de um filme.');
+		document.getElementById('clearButton').style.display = 'none';
         return;
     }
 
@@ -40,6 +41,7 @@ async function performSearch() {
         showError(`Erro na busca: ${error.message}`);
     } finally {
         toggleLoading(false);
+		document.getElementById('clearButton').style.display = 'block';
     }
 }
 
@@ -131,3 +133,10 @@ function showError(message) {
 function clearAutocomplete() {
     autocompleteResults.innerHTML = '';
 }
+
+document.getElementById('clearButton').addEventListener('click', () => {
+    searchInput.value = '';
+    clearAutocomplete();
+    resultDiv.style.display = 'none';
+	document.getElementById('clearButton').style.display = 'none';
+});
